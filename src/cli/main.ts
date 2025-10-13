@@ -5,14 +5,14 @@ import { ImportCommand } from './commands/import.command.js';
 import { VersionCommand } from './commands/version.command.js';
 
 function bootstrap() {
-    const cliApplication = new CLIApplication();
-    cliApplication.registerCommands([
-        new HelpCommand(),
-        new VersionCommand(),
-        new ImportCommand(),
-    ]);
+  const cliApplication = new CLIApplication();
+  cliApplication.registerCommands([
+    new HelpCommand(),
+    new VersionCommand(),
+    new ImportCommand(),
+  ]);
 
-    cliApplication.processCommand(process.argv);
+  cliApplication.processCommand(process.argv);
 }
 
 bootstrap();

@@ -1,17 +1,17 @@
 export const CITIES = [
-  "Paris",
-  "Cologne",
-  "Brussels",
-  "Amsterdam",
-  "Hamburg",
-  "Dusseldorf",
+  'Paris',
+  'Cologne',
+  'Brussels',
+  'Amsterdam',
+  'Hamburg',
+  'Dusseldorf',
 ] as const;
 
 export const HOUSING_TYPES = [
-    'apartment', 
-    'house', 
-    'room', 
-    'hotel',
+  'apartment',
+  'house',
+  'room',
+  'hotel',
 ] as const;
 
 export const GOODS = [

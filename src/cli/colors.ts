@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import chalk from 'chalk';
 
 export const BLUE = chalk.blue;
 export const CYAN = chalk.cyan;

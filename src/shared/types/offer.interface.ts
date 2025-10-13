@@ -1,6 +1,6 @@
-import { CityType } from "./city.type";
-import { GoodsType } from "./goods.type";
-import { HousingType } from "./housing.type";
+import { CityType } from './city.type';
+import { GoodsType } from './goods.type';
+import { HousingType } from './housing.type';
 
 
 export interface Offer {
