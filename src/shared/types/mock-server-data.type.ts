@@ -1,6 +1,6 @@
-import { CityType } from "./city.type";
-import { HousingType } from "./housing.type";
-import { Location } from "./location.type";
+import { CityType } from './city.type';
+import { HousingType } from './housing.type';
+import { Location } from './location.type';
 
 export type MockServerData = {
   housingTypes : HousingType[]
@@ -11,6 +11,6 @@ export type MockServerData = {
   goods: string[];
   hostNames: string[];
   hostEmails: string[];
-  userTypes: ("Standart" | "Pro")[];
+  userTypes: ('Standart' | 'Pro')[];
   locations: Location[];
 };

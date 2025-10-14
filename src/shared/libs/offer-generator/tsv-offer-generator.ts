@@ -59,3 +59,4 @@ export class TSVOfferGenerator implements OfferGenerator {
     ].join('\t');
   }
 }
+
