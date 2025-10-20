@@ -1,0 +1,73 @@
+{
+  "api": {
+    "titles": [
+      "Квартира с видом",
+      "Дом на окраине",
+      "Отель - 50км от моря",
+      "Комната 1м кв.",
+      "Квартира с одним... окном"
+    ],
+    "descriptions": [
+      "Великолепная квартира с видом на улицы города",
+      "Красивый и абсолютно безопасный дом на краю... скалы",
+      "Отель, а может и не отель",
+      "Зато всего 1$ в день",
+      "И больше здесь ничего нет"
+    ],
+    "cities": [
+      "Paris",
+      "Cologne",
+      "Brussels",
+      "Amsterdam",
+      "Hamburg",
+      "Dusseldorf"
+    ],
+    "previewImages": [
+      "apartment1.jpg",
+      "hotel.jpg",
+      "house.jpg",
+      "room.jpg",
+      "apartment2.jpg"
+    ],
+    "housingTypes": [
+      "apartment",
+      "house",
+      "room",
+      "hotel"
+    ],
+    "goods": [
+      "Breakfast",
+      "Air conditioning",
+      "Laptop friendly workspace",
+      "Baby seat",
+      "Washer",
+      "Towels",
+      "Fridge"
+    ],
+    "hostNames": [
+      "Ravix of the Four Cornersа",
+      "Rick A",
+      "No Name",
+      "Albert Dusseldorf",
+      "Brat Acrobat.bat"
+    ],
+    "hostEmails": [
+      "a1@email.com",
+      "b2@email.com",
+      "c3@email.com",
+      "d4@email.com",
+      "e5@email.com"
+    ],
+    "userTypes": [
+      "Standart",
+      "Pro"
+    ],
+    "locations": [
+      {"longitude": "50.1", "latitude" : "30.01"},
+      {"longitude": "56", "latitude" : "65.65"},
+      {"longitude": "76.5345341", "latitude" : "32.2"},
+      {"longitude": "34.45", "latitude" : "100"},
+      {"longitude": "11", "latitude" : "10.121"}
+    ]
+  }
+}
