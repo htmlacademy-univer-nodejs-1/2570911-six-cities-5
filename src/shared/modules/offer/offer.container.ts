@@ -11,3 +11,4 @@ export const offerContainer: ContainerModule = new ContainerModule(
     options.bind<types.ModelType<OfferEntity>>(Component.OfferModel).toConstantValue(OfferModel);
   }
 );
+
