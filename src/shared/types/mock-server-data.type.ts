@@ -11,6 +11,7 @@ export type MockServerData = {
   goods: string[];
   hostNames: string[];
   hostEmails: string[];
+  hostAvatars: string[];
   userTypes: ('Standart' | 'Pro')[];
   locations: Location[];
 };
