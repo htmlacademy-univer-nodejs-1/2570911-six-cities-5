@@ -16,7 +16,10 @@ export function createOffer(offerData: string): Offer {
     peopleCnt,
     price,
     amenities,
-    host,
+    name,
+    avatarUrl,
+    email,
+    isPro,
     commentsCnt,
     latitude,
     longitude
@@ -37,7 +40,7 @@ export function createOffer(offerData: string): Offer {
     maxAdults: parseInt(peopleCnt, 10),
     price: parseInt(price, 10),
     goods: amenities.split(';') as GoodsType[],
-    host,
+    host: {name, avatarUrl, isPro: isPro === 'true', email},
     commentsCount: parseInt(commentsCnt, 10),
     location: {
       latitude : Number.parseFloat(latitude),

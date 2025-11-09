@@ -1,6 +1,7 @@
 import { CityType } from './city.type';
 import { GoodsType } from './goods.type';
 import { HousingType } from './housing.type';
+import { User } from './user.interface';
 
 
 export interface Offer {
@@ -18,7 +19,7 @@ export interface Offer {
     maxAdults: number;
     price: number;
     goods: GoodsType[];
-    host: string;
+    host: User;
     commentsCount: number;
     location: {
         latitude: number,
