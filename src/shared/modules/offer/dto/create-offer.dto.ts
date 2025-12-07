@@ -1,4 +1,4 @@
-import {GoodsType, CityType, HousingType} from '../../../types';
+import {GoodsType, CityType, HousingType, User} from '../../../types';
 
 export class CreateOfferDto {
   title: string;
@@ -8,7 +8,7 @@ export class CreateOfferDto {
   previewImage: string;
   images: string[];
   isPremium: boolean;
-  isFavorite: boolean;
+  isFavoriteBy: User[];
   rating: number;
   type: HousingType;
   bedrooms: number;
