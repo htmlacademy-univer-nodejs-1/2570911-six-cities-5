@@ -1,5 +1,5 @@
 import { Expose, Type } from 'class-transformer';
-import { OfferCityRdo } from './offer-city.rdo'
+import { OfferCityRdo } from './offer-city.rdo';
 
 export class OfferRdo {
   @Expose()
