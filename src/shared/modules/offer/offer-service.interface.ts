@@ -15,6 +15,6 @@ export interface OfferService {
   findPremiumOffersInCity(city: CityType): Promise<DocumentType<OfferEntity>[]>;
   getUserFavorites(userId: string): Promise<DocumentType<OfferEntity>[]>;
   addFavorite(userId: string, offerId: string): Promise<DocumentType<OfferEntity> | null>;
-  removeFavorite(userId: string, offerId: string): Promise<void>;
+  removeFavorite(userId: string, offerId: string): Promise<DocumentType<OfferEntity> | null>;
   exists(documentId: string): Promise<boolean>;
 }

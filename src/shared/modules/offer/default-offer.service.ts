@@ -78,8 +78,8 @@ export class DefaultOfferService implements OfferService {
       .exec();
   }
 
-  public async removeFavorite(userId: string, offerId: string): Promise<void> {
-    await this.offerModel.findByIdAndUpdate(
+  public async removeFavorite(userId: string, offerId: string): Promise<types.DocumentType<OfferEntity> | null> {
+    return await this.offerModel.findByIdAndUpdate(
       offerId,
       { $pop: { favouritedBy: userId } },
       { new: true }
