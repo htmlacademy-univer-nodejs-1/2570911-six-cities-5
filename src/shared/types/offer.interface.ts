@@ -12,7 +12,7 @@ export interface Offer {
     previewImage: string;
     images: string[];
     isPremium: boolean;
-    isFavoriteBy: User[];
+    isFavorite: boolean;
     rating: number;
     type: HousingType;
     bedrooms: number;

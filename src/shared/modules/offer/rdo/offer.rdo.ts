@@ -1,5 +1,5 @@
-import { Expose, Type } from 'class-transformer';
-import { OfferCityRdo } from './offer-city.rdo';
+import { Expose } from 'class-transformer';
+import { CityType } from '../../../types';
 
 export class OfferRdo {
   @Expose()
@@ -15,8 +15,7 @@ export class OfferRdo {
   public price!: number;
 
   @Expose()
-  @Type(() => OfferCityRdo)
-  public city!: OfferCityRdo;
+  public city!: CityType;
 
   @Expose()
   public previewImage!: string;

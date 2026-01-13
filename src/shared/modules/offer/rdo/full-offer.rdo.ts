@@ -1,8 +1,8 @@
 import { Expose, Type } from 'class-transformer';
 
-import { OfferCityRdo } from './offer-city.rdo.js';
 import { OfferLocationRdo } from './offer-location.rdo.js';
 import { OfferAuthorRdo } from './offer-author.rdo.js';
+import { CityType } from '../../../types/city.type.js';
 
 export class FullOfferRdo {
   @Expose()
@@ -18,8 +18,7 @@ export class FullOfferRdo {
   public postDate!: Date;
 
   @Expose()
-  @Type(() => OfferCityRdo)
-  public city!: OfferCityRdo;
+  public city!: CityType;
 
   @Expose()
   public previewImage!: string;

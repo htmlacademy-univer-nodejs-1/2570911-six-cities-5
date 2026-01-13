@@ -51,8 +51,6 @@ export class ImportCommand implements Command {
       previewImage: offer.previewImage,
       images: offer.images,
       isPremium: offer.isPremium,
-      isFavoriteBy: offer.isFavoriteBy,
-      rating: offer.rating,
       type: offer.type,
       bedrooms: offer.bedrooms,
       maxAdults: offer.maxAdults,
@@ -60,8 +58,6 @@ export class ImportCommand implements Command {
       goods: offer.goods,
       host: user.id,
       location: offer.location,
-      postDate: offer.postDate,
-      commentsCount: offer.commentsCount,
     });
   }
 

@@ -1,5 +1,5 @@
 import { Command } from './command.interface.js';
-import { BLUE, CYAN, MAGENTA } from '../colors.js';
+import { COLORS } from '../colors.js';
 
 export class HelpCommand implements Command {
   public getName(): string {
@@ -7,6 +7,7 @@ export class HelpCommand implements Command {
   }
 
   public async execute(..._parameters: string[]): Promise<void> {
+    const {BLUE, CYAN, MAGENTA} = COLORS;
     console.info(`
         Программа для подготовки данных для REST API сервера.
         Пример: cli.js --${BLUE('<command>')} [${CYAN('--arguments')}]

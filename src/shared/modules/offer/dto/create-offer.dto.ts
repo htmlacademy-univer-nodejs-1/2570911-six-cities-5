@@ -1,24 +1,86 @@
-import {GoodsType, CityType, HousingType, User} from '../../../types';
+import {
+  IsString,
+  IsBoolean,
+  IsInt,
+  IsArray,
+  IsEnum,
+  Min,
+  Max,
+  MinLength,
+  MaxLength,
+  ArrayMinSize,
+  ArrayMaxSize,
+  ValidateNested,
+  IsNumber,
+} from 'class-validator';
+import { Type } from 'class-transformer';
+import { HousingType, GoodsType, CityType } from '../../../types/index.js';
+import { HOUSING_TYPES, GOODS, CITY_VALUES } from '../../../../consts/consts.js';
+
+class LocationDto {
+  @IsNumber()
+  @Min(-90)
+  @Max(90)
+  public latitude!: number;
+
+  @IsNumber()
+  @Min(-180)
+  @Max(180)
+  public longitude!: number;
+}
 
 export class CreateOfferDto {
-  title: string;
-  description: string;
-  postDate: Date;
-  city: CityType;
-  previewImage: string;
-  images: string[];
-  isPremium: boolean;
-  isFavoriteBy: User[];
-  rating: number;
-  type: HousingType;
-  bedrooms: number;
-  maxAdults: number;
-  price: number;
-  goods: GoodsType[];
-  host: string;
-  commentsCount: number;
-  location: {
-      latitude: number,
-      longitude: number,
-  };
+  @IsString()
+  @MinLength(10, { message: 'Title must be at least 10 characters' })
+  @MaxLength(100, { message: 'Title must be at most 100 characters' })
+  public title!: string;
+
+  @IsString()
+  @MinLength(20, { message: 'Description must be at least 20 characters' })
+  @MaxLength(1024, { message: 'Description must be at most 1024 characters' })
+  public description!: string;
+
+  @IsEnum(CITY_VALUES, {message: 'City must be Paris, Cologne, Brussels, Amsterdam, Hamburg or Dusseldorf' })
+  public city!: CityType;
+
+  @IsString()
+  public previewImage!: string;
+
+  @IsArray()
+  @ArrayMinSize(6, { message: 'Images must contain exactly 6 items' })
+  @ArrayMaxSize(6, { message: 'Images must contain exactly 6 items' })
+  @IsString({ each: true })
+  public images!: string[];
+
+  @IsBoolean()
+  public isPremium!: boolean;
+
+  @IsEnum(HOUSING_TYPES, { message: 'Invalid housing type' })
+  public type!: HousingType;
+
+  @IsInt()
+  @Min(1, { message: 'Bedrooms must be at least 1' })
+  @Max(8, { message: 'Bedrooms must be at most 8' })
+  public bedrooms!: number;
+
+  @IsInt()
+  @Min(1, { message: 'Max adults must be at least 1' })
+  @Max(10, { message: 'Max adults must be at most 10' })
+  public maxAdults!: number;
+
+  @IsInt()
+  @Min(100, { message: 'Price must be at least 100' })
+  @Max(100000, { message: 'Price must be at most 100000' })
+  public price!: number;
+
+  @IsArray()
+  @IsEnum(GOODS, { each: true, message: 'Invalid amenity' })
+  @ArrayMinSize(1, { message: 'At least one amenity is required' })
+  public goods!: GoodsType[];
+
+  public host?: string;
+
+  @ValidateNested()
+  @Type(() => LocationDto)
+  public location!: LocationDto;
 }

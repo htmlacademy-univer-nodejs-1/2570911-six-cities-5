@@ -4,10 +4,12 @@ import { Component } from '../../types/index.js';
 import { CommentEntity, CommentModel } from './comment.entity.js';
 import {ContainerModule, ContainerModuleLoadOptions} from 'inversify';
 import {DefaultCommentService} from './default-comment.service.js';
+import { CommentController } from './comment.controller.js';
 
 export const commentContainer: ContainerModule = new ContainerModule(
   (options: ContainerModuleLoadOptions) => {
     options.bind<CommentService>(Component.CommentService).to(DefaultCommentService).inSingletonScope();
     options.bind<types.ModelType<CommentEntity>>(Component.CommentModel).toConstantValue(CommentModel);
+    options.bind<CommentController>(Component.CommentController).to(CommentController).inSingletonScope();
   }
 );

@@ -1,12 +1,3 @@
-export const CITIES = [
-  'Paris',
-  'Cologne',
-  'Brussels',
-  'Amsterdam',
-  'Hamburg',
-  'Dusseldorf',
-] as const;
-
 export const HOUSING_TYPES = [
   'apartment',
   'house',
@@ -38,3 +29,21 @@ export const enum CONST_OFFER_DATA {
   FIRST_WEEK_DAY = 1,
   LAST_WEEK_DAY = 7
 }
+
+export const enum CITIES {
+  Paris = 'Paris',
+  Cologne = 'Cologne',
+  Brussels = 'Brussels',
+  Amsterdam = 'Amsterdam',
+  Hamburg = 'Hamburg',
+  Dusseldorf = 'Dusseldorf'
+}
+
+export const CITY_VALUES = [
+  CITIES.Paris,
+  CITIES.Cologne,
+  CITIES.Brussels,
+  CITIES.Amsterdam,
+  CITIES.Hamburg,
+  CITIES.Dusseldorf
+] as const;

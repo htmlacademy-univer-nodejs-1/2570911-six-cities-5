@@ -7,3 +7,4 @@ export * from './offer.interface.js';
 export * from './user.interface.js';
 export * from './location.type.js';
 export * from './component.enum.js';
+export * from './document-exists.interface.js';

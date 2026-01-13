@@ -28,9 +28,6 @@ export class CommentEntity extends defaultClasses.TimeStamps {
 
   @prop({required: true})
   public rating!: number;
-
-  @prop({required: true})
-  public datePublication!: Date;
 }
 
 export const CommentModel = getModelForClass(CommentEntity);
